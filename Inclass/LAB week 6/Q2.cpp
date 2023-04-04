@@ -19,13 +19,13 @@ struct LinkedList {
         newNode->next = top;
         top = newNode;
         cout << "Pushed " << x << " onto the stack.\n";
-        cout << "Stack: ( ";
+        cout << "Stack: [ ";
         Node* curr = top;
         while (curr != NULL) {
-            cout << curr->data << " ";
+            cout << curr->data << " , ";
             curr = curr->next;
         }
-        cout << ")\n";
+        cout << "]\n";
     }
 
     int pop() {
@@ -38,13 +38,13 @@ struct LinkedList {
         top = top->next;
         delete temp;
         cout << "Popped " << x << " from the stack.\n";
-        cout << "Stack: ( ";
+        cout << "Stack: [ ";
         Node* curr = top;
         while (curr != NULL) {
-            cout << curr->data << " ";
+            cout << curr->data << " , ";
             curr = curr->next;
         }
-        cout << ")\n";
+        cout << "]\n";
         return x;
     }
 

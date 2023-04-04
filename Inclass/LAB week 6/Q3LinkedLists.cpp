@@ -53,13 +53,13 @@ struct Stack {
             cout << "Stack is empty\n";
             return;
         }
-        cout << "Stack: ( ";
+        cout << "Stack: [";
         Node* curr = top;
         while (curr != NULL) {
-            cout << curr->data << " ";
+            cout << curr->data << " - ";
             curr = curr->next;
         }
-        cout << ")\n";
+        cout << "]\n";
     }
 };
 

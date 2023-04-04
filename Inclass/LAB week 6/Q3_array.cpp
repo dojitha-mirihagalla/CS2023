@@ -53,12 +53,12 @@ void display()
         cout << "Stack is empty\n";
         return;
     }
-    cout << "Stack: ( ";
+    cout << "Stack: [ ";
     for (int i = 0; i <= top; i++)
     {
-        cout << arr[i] << " ";
+        cout << arr[i] << " - ";
     }
-    cout << ")\n";
+    cout << "]\n";
 }
 
 int main()
