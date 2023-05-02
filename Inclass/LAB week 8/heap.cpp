@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+#include <ctime>
 using namespace std;
 
 // function to heapify the tree
@@ -59,7 +61,7 @@ void displayArray(int arr[], int n)
 // main program
 int main()
 {
-   int heap_arr[] = {4, 23, 17, 3, 67, 99, 34, 56, 78, 99, 14, 12, 9, 6};
+   int heap_arr[] = {4, 17, 3, 12, 9, 6};
    int n = sizeof(heap_arr) / sizeof(heap_arr[0]);
    cout << "Input array 1 " << endl;
    displayArray(heap_arr, n);
@@ -68,4 +70,30 @@ int main()
 
    cout << "Sorted array 1 " << endl;
    displayArray(heap_arr, n);
+
+
+   cout <<"-------------------------------------"<<endl;
+
+   /*int heap_arr[] = {4,17,3,12,9,6};*/
+   const int MAX_SIZE = 10;
+   int heap_arr1[MAX_SIZE];
+
+    srand(time(NULL)); // Seed the random number generator
+
+    // Fill the array with random integers between 1 and 100
+    for (int i = 0; i < MAX_SIZE; i++) {
+        heap_arr1[i] = rand() % 100 + 1;
+    }
+   n = sizeof(heap_arr1)/sizeof(heap_arr1[0]);
+   cout<<"Input array2"<<endl;
+   displayArray(heap_arr1,n);
+  
+   heapSort(heap_arr1, n);
+  
+   cout << "Sorted array2"<<endl;
+   displayArray(heap_arr1, n);
+
+
+
+
 }
